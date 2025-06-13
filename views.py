@@ -103,7 +103,7 @@ def start(message):
         f'''Hello {message.from_user.first_name}! 👋 I am your personal climate assistant. 
 With me, you can: 
     🔹 Access current measurements of temperature, humidity, wind speed, and more, refreshed every 15 minutes.
-    🔹 Compare weather data between any two devices (e.g., TUMO in Yerevan vs. a device in Gyumri).
+    🔹 Compare weather data between any two devices (e.g., TUMO in Yerevan vs. a device in Shirak).
 '''
     )
     send_location_selection(message.chat.id)
@@ -293,7 +293,7 @@ def format_comparison(device1, device1_data, device2, device2_data):
         f"🫁 <b>PM1.0:</b> {compare_values(pm1_1, pm1_2, 'µg/m³', 'cleaner', reverse=True)} ({pm1_desc1} vs {pm1_desc2})\n"
         f"💨 <b>PM2.5:</b> {compare_values(pm2_5_1, pm2_5_2, 'µg/m³', 'cleaner', reverse=True)} ({pm2_5_desc1} vs {pm2_5_desc2})\n"
         f"🌫️ <b>PM10:</b> {compare_values(pm10_1, pm10_2, 'µg/m³', 'cleaner', reverse=True)} ({pm10_desc1} vs {pm10_desc2})\n\n"
-        f"<b>𝗪𝗲𝗮𝘁𝗵𝗲�_r 𝗖𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻</b>\n"
+        f"<b>𝗪𝗲𝗮𝘁𝗵𝗲𝗿 𝗖𝗼𝗻𝗱𝗶𝘁𝗶𝗼𝗻</b>\n"
         f"🌪️ <b>Wind Speed:</b> {compare_values(wind_speed1, wind_speed2, 'm/s', 'windier')}\n"
         f"🌧️ <b>Rainfall:</b> {compare_values(rain1, rain2, 'mm', 'wetter')}\n"
         f"🧭 <b>Wind Direction:</b> {wind_dir1} vs {wind_dir2}\n"
